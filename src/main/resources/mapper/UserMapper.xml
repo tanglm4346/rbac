@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tlm.security.rbac.mapper.UserMapper">
+    <select id="loadUserByUsername" parameterType="User" resultType="User">
+        select *
+        from user
+        where user.username = #{username}
+    </select>
+
+    <insert id="insertOne" parameterType="User">
+        insert into user(username, password, real_name, mobile, enable, create_time)
+        values (#{username},
+                #{password},
+                #{realName},
+                #{mobile},
+                #{enable},
+                #{createTime})
+
+
+    </insert>
+</mapper>
