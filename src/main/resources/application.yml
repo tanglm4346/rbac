@@ -1,5 +1,11 @@
 server:
   port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    encoding:
+      force-request: true
+      force-response: true
 mybatis:
   mapper-locations: classpath:/mapper/*Mapper.xml
   type-aliases-package: com.tlm.security.rbac.entity

@@ -27,7 +27,7 @@ public class UserMapperTest {
     @Test
     public void loadUserbyUserName() {
         User user = new User();
-        user.setUsername("123456");
+        user.setUsername("434632");
         User tUser = userMapper.loadUserByUsername(user);
         log.info("test user={}", tUser);
     }

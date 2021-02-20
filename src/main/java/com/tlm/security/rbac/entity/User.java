@@ -15,12 +15,12 @@ public class User implements UserDetails {
     private String realName;
     private String mobile;
     private int enable;
-    private List<UserAuthority> authorities;
+    private List<Role> authorities;
     private Date createTime;
 
 
     @Override
-    public Collection<UserAuthority> getAuthorities() {
+    public Collection<Role> getAuthorities() {
         return authorities;
     }
 
